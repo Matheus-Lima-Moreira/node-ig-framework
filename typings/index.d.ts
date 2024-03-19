@@ -35,7 +35,7 @@ declare module "node-ig-framework" {
     public createChat(userIDs: number[]): Promise<Chat>;
     public fetchChat(chatID: string, force?: boolean): Promise<Chat>;
     public fetchUser(query: string, force?: boolean): Promise<User>;
-    public logout(): void;
+    public logout(): Promise<void>;
     public login(username: string, password: string): Promise<LoginResponse>;
     public toJSON(): ClientJSON;
 
